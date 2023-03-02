@@ -11,7 +11,7 @@ RUN chmod +x /entrypoint/entrypoint.sh
 WORKDIR /tempserver
 RUN apt update
 RUN apt install -y wget
-RUN wget -O ./paper.jar "https://paper.c0v.in"
+RUN wget -O ./paper.jar "https://api.papermc.io/v2/projects/paper/versions/1.19.3/builds/431/downloads/paper-1.19.3-431.jar"
 RUN java -Xmx${_ram} -jar paper.jar
 RUN sed -i -e 's/false/true/g' eula.txt
 
