@@ -1,7 +1,7 @@
 name: papermc-build
 
 on:
-  push:
+  workflow_dispatch:
     branches:
       - "main"
 
